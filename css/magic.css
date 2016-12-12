@@ -1,0 +1,132 @@
+/*reset*/
+*{
+    	margin:0;
+    	padding: 0;
+    }
+    .view {
+        width: 160px;
+        height: 160px;
+        margin: 80px auto 0;
+    }
+   /*设置盒子3D旋转中心和动画*/ 
+    #box {
+        -webkit-transform-style: preserve-3d;
+        -ms-transform-style:preserve-3d;
+        transform-style: preserve-3d;
+        /*-webkit-perspective:300;*/
+        /*-webkit-perspective-origin: -52% -40px;*/
+        -o-transform-origin: 80px 80px 0;
+        -moz-transform-origin: 80px 80px 0;
+        -ms-transform-origin: 80px 80px 0;
+        -webkit-transform-origin: 80px 80px 0;
+        transform-origin: 80px 80px 0;
+        -webkit-animation: rock 6s ease-in-out .1s infinite;
+        /*-ms-animation: rock 6s ease-in-out .1s infinite;*/
+        -moz-animation: rock 6s ease-in-out .1s infinite;
+        -o-animation: rock 6s ease-in-out .1s infinite;
+        animation: rock 6s ease-in-out .1s infinite;
+    }
+    @-moz-keyframes rock {
+        25% {-moz-transform: rotateY(90deg);}
+        50% {-moz-transform: rotateX(90deg);}
+        75% {-moz-transform: rotateX(90deg) rotateY(180deg) rotateZ(90deg);}
+    }
+    @-o-keyframes rock {
+        25% {-o-transform: rotateY(90deg);}
+        50% {-o-transform: rotateX(90deg);}
+        75% {-o-transform: rotateX(90deg) rotateY(180deg) rotateZ(90deg);}
+    }
+/*    @-ms-keyframes rock {
+        25% {-ms-transform: rotateY(90deg);}
+        50% {-ms-transform: rotateX(90deg);}
+        75% {-ms-transform: rotateX(90deg) rotateY(180deg) rotateZ(90deg);}
+    }*/
+    @-webkit-keyframes rock {
+        25% {-webkit-transform: rotateY(90deg);}
+        50% {-webkit-transform: rotateX(90deg);}
+        75% {-webkit-transform: rotateX(90deg) rotateY(180deg) rotateZ(90deg);}
+    }
+     @keyframes rock {
+        25% {transform: rotateY(90deg);}
+        50% {transform: rotateX(90deg);}
+        75% {transform: rotateX(90deg) rotateY(180deg) rotateZ(90deg);}
+    }
+    #box div {
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        /*border: 2px solid #000;*/
+        text-align: center;
+        /*background: rgba(255, 200, 100, 0.8);*/
+    }
+    /*方格样式*/
+    #box div ul li{
+    	list-style: none;
+    	display: inline-block;
+    	width: 59px;
+    	height: 59px;
+    	border-radius: 10px;
+    	float: left;
+		/*padding: 1px 1px 0 0 ;*/
+    	margin: 1px 1px 0 0;
+    }
+    #box .one {
+        -webkit-transform: translateZ(90px);
+        -moz-transform: translateZ(90px);
+        -ms-transform: translateZ(90px);
+        -o-transform: translateZ(90px);
+        transform: translateZ(90px);
+    }
+    #box .one ul li{
+    	background:#15FF0B;
+    }
+    #box .two {
+        -webkit-transform: rotateX(90deg) translateZ(-90px);
+        -moz-transform: rotateX(90deg) translateZ(-90px);
+        -o-transform: rotateX(90deg) translateZ(-90px);
+        -ms-transform: rotateX(90deg) translateZ(-90px);
+        transform: rotateX(90deg) translateZ(-90px);
+    }
+    #box .two ul li{
+    	background:#14FFFC;
+    }
+    #box .three {
+        -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(90px);
+        -moz-transform: rotateY(90deg) rotateX(90deg) translateZ(90px);
+        -o-transform: rotateY(90deg) rotateX(90deg) translateZ(90px);
+        -ms-transform: rotateY(90deg) rotateX(90deg) translateZ(90px);
+        transform: rotateY(90deg) rotateX(90deg) translateZ(90px);
+    }
+    #box .three ul li{
+    	background:#138A4E;
+    }
+    #box .four {
+        -webkit-transform: rotateY(180deg) translateZ(90px);
+        -moz-transform: rotateY(180deg) translateZ(90px);
+        -o-transform: rotateY(180deg) translateZ(90px);
+        -ms-transform: rotateY(180deg) translateZ(90px);
+        transform: rotateY(180deg) translateZ(90px);
+    }
+    #box .four ul li{
+    	background:#0A00F1;
+    }
+    #box .five {
+        -webkit-transform: rotateY(-90deg) rotateZ(-90deg) translateZ(90px);
+        -moz-transform: rotateY(-90deg) rotateZ(-90deg) translateZ(90px);
+        -o-transform: rotateY(-90deg) rotateZ(-90deg) translateZ(90px);
+        -ms-transform: rotateY(-90deg) rotateZ(-90deg) translateZ(90px);
+        transform: rotateY(-90deg) rotateZ(-90deg) translateZ(90px);
+    }
+    #box .five ul li{
+    	background:#FCFF0B;
+    }
+    #box .six {
+        -webkit-transform: rotateY(90deg) translateZ(90px);
+        -ms-transform: rotateY(90deg) translateZ(90px);
+        -moz-transform: rotateY(90deg) translateZ(90px);
+        -o-transform: rotateY(90deg) translateZ(90px);
+        transform: rotateY(90deg) translateZ(90px);
+    }
+    #box .six ul li{
+    	background:#EA0003;
+    }
